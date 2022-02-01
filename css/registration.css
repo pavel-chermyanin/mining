@@ -1,0 +1,44 @@
+:root {
+  --prime-color: #dcdcdc;
+  --prime-color-opacity: rgba(220, 220, 220, 0.3);
+  --background-color: #1b1c21;
+  --accent-color: #00ff38;
+  --second-accent-color: #328ed3;
+}
+
+
+.registration-form .login-form__wrapper{
+    padding-bottom: 34px;
+}
+
+.registration-form__top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 29px;
+  margin-bottom: 19px;
+}
+.registration-form .login-form__logo {
+  padding-top: 0;
+  margin-right: -55px;
+  margin-bottom: 0;
+}
+.registration-form .login-form__title {
+  margin-bottom: 0;
+}
+.registration-form__inputs input + input {
+  margin-top: 24;
+}
+.registration-form__capcha-label {
+  display: inline-block;
+  padding: 24px 29px;
+  color: var(--prime-color);
+  margin-bottom: 28px;
+  background-color: #21232a;
+}
+.registration-form .jq-checkbox.registration-form__capcha-input {
+  border: none;
+  background: #27282e;
+}
+.registration-form__forgot-password{
+    margin-left: auto;
+}
