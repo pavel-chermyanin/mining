@@ -42,3 +42,7 @@
 .registration-form__forgot-password{
     margin-left: auto;
 }
+.login-form__box-links{
+    margin-left: auto;
+    text-align: center;
+}
