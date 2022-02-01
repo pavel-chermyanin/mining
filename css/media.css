@@ -27,11 +27,7 @@
   }
 
 }
-/* @media (max-width: 638px) {
-  .password-form .registration-form__capcha-box{
-      text-align: center;
-  }
-} */
+
 @media (max-width: 530px) {
     .password-form .login-form__wrapper {
     padding: 0 50px 50px 50px;
