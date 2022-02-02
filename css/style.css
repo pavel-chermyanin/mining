@@ -328,6 +328,10 @@ body {
 .header .jq-selectbox li.selected {
   background-color: transparent;
 }
+
+.header .language-btn.opened + .select-box__user-icon path{
+  stroke: var(--accent-color);
+}
 .header .language-btn.opened .jq-selectbox__select-text{
   color: var(--accent-color);
 }
@@ -360,7 +364,6 @@ body {
   font-size: 21px;
   line-height: 26px;
   margin-bottom: 2px;
-  font-weight: 600;
 }
 .slider-box__item-text {
   font-family: "Rubik-Regular", sans-serif;
@@ -548,5 +551,8 @@ body {
   background-color: #fff;
   border-radius: 7px;
   transition: all .2s ease-in-out;
+}
+.select-box__user-icon{
+  display: none;
 }
 
