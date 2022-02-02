@@ -51,7 +51,7 @@
 
                             <a class="menu__list-link " href="#">Финансы</a>
                         </li>
-                        <li class="menu__list-item menu__list-item--packets">
+                        <li class="menu__list-item menu__list-item--packets menu__list-item--current">
                             <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -116,89 +116,109 @@
             </div>
         </div>
     </header>
-    <main class="main-page">
-        <div class="slider">
-            <div class="container slider__container">
-                <div class="slider-box">
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--demo">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Demo</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--silver">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Silver</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--silver">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Silver</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--gold">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Gold</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--gold">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Gold 3</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--gold">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Gold 3</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--platinum">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Platinum</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--platinum">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Platinum</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--platinum">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Platinum</p>
-                        </a>
-                    </div>
-                    <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--platinum">
-                            <p class="slider-box__item-num">12</p>
-                            <p class="slider-box__item-text">Platinum</p>
-                        </a>
-                    </div>
 
 
+    <section class="packets">
+        <div class="packets__modal">
+            <div class="packets__modal-box">
+                <h3 class="packets__modal-title">Пакет забронирован!</h3>
+                <p class="packets__modal-text">
+                    В ближайшее время с вами свяжется менеджер для уточнения деталей
+                </p>
+                <button class="packets__modal-btn">Хорошо</button>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="packets__title">Пакеты</h2>
+            <div class="packets__inner">
+                <div class="packets__item packets__item--demo">
+                    <div class="packets__item-top">
+                        <h4 class="packets__item-name">Demo</h4>
+                        <p class="packets__item-price">100.00$</p>
+                        <p class="packets__item-days">730 дней</p>
+                    </div>
+                    <div class="packets__item-bottom">
+                        <p class="packets__item-info">
+                            Рентабильность инвестиций
+                        </p>
+                        <p class="packets__item-percent">
+                            0% к стоимости пакета за 24 месяца
+                        </p>
+                        <p class="packets__item-programm">
+                            Бессрочная партнерская программа
+                        </p>
+                        <button class="packets__item-btn">
+                            Бронировать
+                        </button>
+                    </div>
+                </div>
+                <div class="packets__item packets__item--silver">   
+                    <div class="packets__item-top">
+                        <h4 class="packets__item-name">Silver</h4>
+                        <p class="packets__item-price">1000.00$</p>
+                        <p class="packets__item-days">730 дней</p>
+                    </div>
+                    <div class="packets__item-bottom">
+                        <p class="packets__item-info">
+                            Рентабильность инвестиций
+                        </p>
+                        <p class="packets__item-percent">
+                            50-100% к стоимости пакета за 24 месяца
+                        </p>
+                        <p class="packets__item-programm">
+                            Бессрочная партнерская программа
+                        </p>
+                        <button class="packets__item-btn">
+                            Бронировать
+                        </button>
+                    </div>
+                </div>
+                <div class="packets__item packets__item--gold">
+                    <div class="packets__item-top">
+                        <h4 class="packets__item-name">Gold</h4>
+                        <p class="packets__item-price">7 000.00$</p>
+                        <p class="packets__item-days">730 дней</p>
+                    </div>
+                    <div class="packets__item-bottom">
+                        <p class="packets__item-info">
+                            Рентабильность инвестиций
+                        </p>
+                        <p class="packets__item-percent">
+                            50-100% к стоимости пакета за 24 месяца
+                        </p>
+                        <p class="packets__item-programm">
+                            Бессрочная партнерская программа
+                        </p>
+                        <button class="packets__item-btn">
+                            Бронировать
+                        </button>
+                    </div>
+                </div>
+                <div class="packets__item packets__item--platinum">
+                    <div class="packets__item-top">
+                        <h4 class="packets__item-name">Platinum</h4>
+                        <p class="packets__item-price">14 000.00$</p>
+                        <p class="packets__item-days">730 дней</p>
+                    </div>
+                    <div class="packets__item-bottom">
+                        <p class="packets__item-info">
+                            Рентабильность инвестиций
+                        </p>
+                        <p class="packets__item-percent">
+                            50-100% к стоимости пакета за 24 месяца
+                        </p>
+                        <p class="packets__item-programm">
+                            Бессрочная партнерская программа
+                        </p>
+                        <button class="packets__item-btn">
+                            Бронировать
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="sun-box">
-            <div class="container sun-box__container">
-                <div class="sun-box__inner">
-                    <img class="sun-box__img" src="./images/sun-image.svg" alt="">
-                    <div class="sun-box__text">
-                        <p class="sun-box__text-name">Silver</p>
-                        <p class="sun-box__text-num">123 567</p>
-                        <p class="sun-box__text-info">USTD</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

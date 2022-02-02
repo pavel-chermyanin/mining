@@ -1,3 +1,8 @@
+@media (max-width: 1170px) {
+  .packets__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 1130px) {
   .menu {
     order: -1;
@@ -58,6 +63,11 @@
     margin-top: 38px;
   }
 }
+@media (max-width: 880px) {
+  .packets__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 820px) {
   .header .select-box__lang {
     display: none;
@@ -80,6 +90,9 @@
 @media (max-width: 645px) {
   .password-form {
     width: 590px;
+  }
+  .packets__modal-box {
+    width: 90%;
   }
 }
 
@@ -111,6 +124,14 @@
     position: absolute;
     right: 28px;
     top: 3px;
+  }
+}
+@media (max-width: 550px) {
+  .packets__inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .packets__item-top {
+    padding-left: 15%;
   }
 }
 
@@ -161,7 +182,7 @@
   .jq-checkbox.login-form__checkbox-input {
     flex-shrink: 0;
   }
-  .login-form__submit{
+  .login-form__submit {
     width: 100%;
   }
 
@@ -197,7 +218,7 @@
   }
   .menu__list.active {
     width: 105%;
-}
+  }
   .sun-box__text-num {
     font-size: 32px;
     line-height: 42px;
@@ -205,13 +226,16 @@
   .sun-box__text-name {
     font-size: 21px;
     line-height: 22px;
-}
+  }
+  .packets__item-top {
+    padding-left: 24px;
+  }
 }
 @media (max-width: 350px) {
   .login-form__social-item + .login-form__social-item {
     margin-left: 10px;
   }
-    .menu__list.active {
+  .menu__list.active {
     width: 106%;
-}
+  }
 }
