@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mining</title>
-    <link rel="stylesheet" href="./css/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/jquery.formstyler.css">
     <link rel="stylesheet" href="./css/jquery.formstyler.theme.css">
@@ -25,45 +25,96 @@
             <div class="header__inner">
                 <a class="login-form__logo header__logo" href="#">Logotype</a>
                 <nav class="menu">
+                    <div class="menu-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <ul class="menu__list">
                         <li class="menu__list-item menu__list-item--team">
+                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 19V17C17 15.9391 16.5786 14.9217 15.8284 14.1716C15.0783 13.4214 14.0609 13 13 13H5C3.93913 13 2.92172 13.4214 2.17157 14.1716C1.42143 14.9217 1 15.9391 1 17V19M23 19V17C22.9993 16.1137 22.7044 15.2528 22.1614 14.5523C21.6184 13.8519 20.8581 13.3516 20 13.13M16 1.13C16.8604 1.3503 17.623 1.8507 18.1676 2.55231C18.7122 3.25392 19.0078 4.11683 19.0078 5.005C19.0078 5.89317 18.7122 6.75608 18.1676 7.45769C17.623 8.1593 16.8604 8.6597 16 8.88M13 5C13 7.20914 11.2091 9 9 9C6.79086 9 5 7.20914 5 5C5 2.79086 6.79086 1 9 1C11.2091 1 13 2.79086 13 5Z"
+                                    stroke="#B4B4B4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
                             <a class="menu__list-link " href="#">Команда</a>
                         </li>
                         <li class="menu__list-item menu__list-item--finance">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.6265 3.14545L18.6261 3.14505C18.5392 3.05735 18.4357 2.98779 18.3217 2.94044C18.2077 2.89309 18.0854 2.86888 17.9619 2.86923L17.9616 2.86923L17.2273 2.86923H17.1273V2.76923V1.03857C17.1271 0.789732 17.0281 0.551163 16.8522 0.375208C16.6762 0.199264 16.4377 0.100293 16.1889 0.1H3.05572C2.27182 0.100011 1.52003 0.411445 0.965726 0.965795C0.411422 1.52015 0.100011 2.272 0.1 3.05598V14.944C0.100011 15.728 0.411422 16.4799 0.965726 17.0342C1.52003 17.5886 2.27182 17.9 3.05572 17.9H17.9206C18.1688 17.8995 18.4068 17.8009 18.5826 17.6256C18.7584 17.4504 18.8578 17.2128 18.8591 16.9646C18.8591 16.9645 18.8591 16.9644 18.8591 16.9644M18.6265 3.14545L18.9591 16.9649L18.8591 16.9644M18.6265 3.14545C18.7139 3.23266 18.7831 3.33638 18.83 3.45057C18.877 3.56476 18.9008 3.68715 18.9 3.81061L18.9 3.81093L18.8591 16.9644M18.6265 3.14545L18.8591 16.9644M17.5758 16.7154H17.6755L17.6758 16.6157L17.7144 4.15416L17.7148 4.05385H17.6144H3.21512V2.86923H15.8428H15.9428V2.76923V1.38462V1.28462H15.8428H3.05572C2.58596 1.28462 2.13544 1.47124 1.80328 1.80344C1.47111 2.13563 1.2845 2.58618 1.2845 3.05598V14.944C1.2845 15.4138 1.47111 15.8644 1.80328 16.1966C2.13544 16.5288 2.58596 16.7154 3.05572 16.7154H17.5758ZM14.5583 9.44615H15.7428V10.6308H14.5583V9.44615Z"
+                                    fill="#B4B4B4" stroke="#B4B4B4" stroke-width="0.2" />
+                            </svg>
+
                             <a class="menu__list-link " href="#">Финансы</a>
                         </li>
                         <li class="menu__list-item menu__list-item--packets">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.63217 16.5913L1.60876 16.5472L1.63217 16.5913L3.53028 15.5854C3.53028 15.5854 3.53029 15.5854 3.53029 15.5854C3.96287 15.3564 4.47798 15.3902 4.88066 15.6748L4.88067 15.6748L6.71238 16.9687C6.8864 17.0917 7.11358 17.0917 7.28762 16.9687L9.11933 15.6748L9.09048 15.634L9.11933 15.6748C9.52218 15.3902 10.0372 15.3564 10.4697 15.5854L12.3678 16.5913L12.3912 16.5472L12.3678 16.5913C12.7157 16.7757 13.1167 16.5052 13.1167 16.1047V1.48364C13.1167 1.18575 12.888 0.93904 12.6 0.93904H1.4C1.11204 0.93904 0.88328 1.18575 0.88328 1.48364V16.1047C0.88328 16.5052 1.28425 16.7756 1.63217 16.5913ZM10.0992 16.3817L10.0992 16.3817C9.93257 16.2935 9.73396 16.3067 9.57933 16.4159L9.57931 16.4159L7.74775 17.7099L7.7766 17.7508L7.74775 17.7099C7.29472 18.03 6.70536 18.03 6.25233 17.7099L6.22348 17.7508L6.25233 17.7099L4.42077 16.4159L4.42075 16.4159C4.26611 16.3067 4.0675 16.2935 3.90089 16.3817L3.90087 16.3817L2.00275 17.3875C1.10955 17.8609 0.05008 17.175 0.05008 16.1047L0.05 1.48364C0.05 0.689175 0.657188 0.05 1.4 0.05H12.6C13.3428 0.05 13.95 0.689175 13.95 1.48364V16.1047C13.95 17.175 12.8905 17.8608 11.9973 17.3875L10.0992 16.3817ZM10.6832 5.75277H6.22639V4.86356H10.6832V5.75277ZM4.15 5.75277H3.31672V4.86356H4.15V5.75277ZM4.15 8.98368H3.31672V8.09464H4.15V8.98368ZM4.15 12.215H3.31672V11.326H4.15V12.215ZM10.6832 8.98368H6.22639V8.09464H10.6832V8.98368ZM10.6832 12.215H6.22639V11.326H10.6832V12.215Z"
+                                    fill="#B4B4B4" stroke="#141519" stroke-width="0.1" />
+                            </svg>
+
                             <a class="menu__list-link " href="#">Пакеты</a>
                         </li>
                         <li class="menu__list-item menu__list-item--marketing">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.2 10V19H2.8V10M10 19V5.5M10 5.5H5.95C5.35326 5.5 4.78097 5.26295 4.35901 4.84099C3.93705 4.41903 3.7 3.84674 3.7 3.25C3.7 2.65326 3.93705 2.08097 4.35901 1.65901C4.78097 1.23705 5.35326 1 5.95 1C9.1 1 10 5.5 10 5.5ZM10 5.5H14.05C14.6467 5.5 15.219 5.26295 15.641 4.84099C16.0629 4.41903 16.3 3.84674 16.3 3.25C16.3 2.65326 16.0629 2.08097 15.641 1.65901C15.219 1.23705 14.6467 1 14.05 1C10.9 1 10 5.5 10 5.5ZM1 5.5H19V10H1V5.5Z"
+                                    stroke="#B4B4B4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
                             <a class="menu__list-link " href="#">Маркетинг</a>
                         </li>
                         <li class="menu__list-item menu__list-item--documents">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.75 1H2.75C2.28587 1 1.84075 1.18964 1.51256 1.52721C1.18437 1.86477 1 2.32261 1 2.8V17.2C1 17.6774 1.18437 18.1352 1.51256 18.4728C1.84075 18.8104 2.28587 19 2.75 19H13.25C13.7141 19 14.1592 18.8104 14.4874 18.4728C14.8156 18.1352 15 17.6774 15 17.2V6.4M9.75 1L15 6.4M9.75 1V6.4H15M11.5 10.9H4.5M11.5 14.5H4.5M6.25 7.3H4.5"
+                                    stroke="#B4B4B4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <a class="menu__list-link " href="#">Документы</a>
                         </li>
                         <li class="menu__list-item menu__list-item--question">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13C19 13.5304 18.7893 14.0391 18.4142 14.4142C18.0391 14.7893 17.5304 15 17 15H5L1 19V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H17C17.5304 1 18.0391 1.21071 18.4142 1.58579C18.7893 1.96086 19 2.46957 19 3V13Z"
+                                    stroke="#B4B4B4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <a class="menu__list-link " href="#">Вопрос-ответ</a>
                         </li>
                     </ul>
                 </nav>
-                <div class="select-box">
+                <div class="select-box select-box__lang">
                     <select class="filter-style language-btn">
                         <option value="">Russian</option>
                         <option value="">English</option>
                         <option value="">Deutsch</option>
                     </select>
                 </div>
+                <div class="select-box select-box__user">
+                    <select class="filter-style language-btn">
+                        <option value="">Emilchik05677567567567</option>
+                        <option value="">Выход</option>
+                    </select>
+                </div>
 
-                <button class="user-btn btn-drop">Emilchik013</button>
+                <!-- <button class="user-btn btn-drop">Emilchik013</button>
                 <div class="user-btn__drop">
 
-                </div>
+                </div> -->
             </div>
             <!-- <img src="./images/sun-image.svg" alt=""> -->
         </div>
     </header>
     <main class="main-page">
-        <section class="slider">
+        <div class="slider">
             <div class="container slider__container">
                 <div class="slider-box">
                     <div class="slider-box__item-wrapper">
@@ -91,13 +142,13 @@
                         </a>
                     </div>
                     <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--gold-3">
+                        <a class="slider-box__item slider-box__item--gold">
                             <p class="slider-box__item-num">12</p>
                             <p class="slider-box__item-text">Gold 3</p>
                         </a>
                     </div>
                     <div class="slider-box__item-wrapper">
-                        <a class="slider-box__item slider-box__item--gold-3">
+                        <a class="slider-box__item slider-box__item--gold">
                             <p class="slider-box__item-num">12</p>
                             <p class="slider-box__item-text">Gold 3</p>
                         </a>
@@ -130,7 +181,20 @@
 
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="sun-box">
+            <div class="container sun-box__container">
+                <div class="sun-box__inner">
+                    <img class="sun-box__img" src="./images/sun-image.svg" alt="">
+                    <div class="sun-box__text">
+                        <p class="sun-box__text-name">Silver</p>
+                        <p class="sun-box__text-num">123 567</p>
+                        <p class="sun-box__text-info">USTD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 

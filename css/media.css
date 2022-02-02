@@ -1,3 +1,68 @@
+@media (max-width: 1130px) {
+  .menu {
+    order: -1;
+    flex-grow: 1;
+    margin-left: -10px;
+  }
+  .header__logo {
+    flex-grow: 1;
+  }
+  .menu-burger {
+    display: flex;
+    margin-left: 18px;
+    position: relative;
+    z-index: 300;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu__list {
+    top: 0;
+    position: absolute;
+    display: block;
+    z-index: 200;
+    width: 340px;
+    background: linear-gradient(to bottom, #1b1c21 73px, #141519 0%);
+    padding: 95px 20px 20px;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.35);
+    height: 100vh;
+    transform: translateX(-150%);
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-burger.active span{
+    position: absolute;
+  }
+  .menu__list.active {
+    display: block;
+    transform: translateX(0);
+  }
+  .menu-burger.active span:nth-child(2){
+    display: none;
+  }
+  .menu-burger.active span:nth-child(1){
+    transform: rotate(45deg);
+  }
+  .menu-burger.active span:nth-child(3){
+     transform: rotate(-45deg);
+  }
+  .menu-burger.active::before {
+    content: "Вход";
+    position: absolute;
+    left: 50px;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Oxanium-Bold", sans-serif;
+    font-weight: 700;
+  }
+  .menu__list-item + .menu__list-item {
+    margin-left: 0;
+    margin-top: 38px;
+  }
+}
+@media (max-width: 820px) {
+  .sun-box__img{
+    width: 95%;
+  }
+}
 @media (max-width: 676px) {
   .password-form {
     width: 622px;
@@ -22,14 +87,13 @@
   .password-form .login-form__wrapper {
     padding: 0 90px 90px 90px;
   }
-  .password-form .registration-form__capcha-label{
-      width: 100%;
+  .password-form .registration-form__capcha-label {
+    width: 100%;
   }
-
 }
 
 @media (max-width: 530px) {
-    .password-form .login-form__wrapper {
+  .password-form .login-form__wrapper {
     padding: 0 50px 50px 50px;
   }
 }
@@ -86,13 +150,12 @@
   }
   .password-form .login-form__wrapper {
     padding: 0 20px 50px 20px;
-}
-
+  }
 }
 @media (max-width: 490px) {
-    .registration-form__checkbox{
-        align-items: flex-start;
-    }
+  .registration-form__checkbox {
+    align-items: flex-start;
+  }
 }
 @media (max-width: 420px) {
   .login-form__social-item {
