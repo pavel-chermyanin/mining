@@ -91,6 +91,7 @@ $(function () {
 
 
     // ==== packets drop-down =====
+
     $(window).resize(function () {
         if ($(window).width() < 549) {
             $('.packets__item-top').next().slideUp('600')
@@ -104,5 +105,19 @@ $(function () {
             $(this).next().slideToggle('600')
         }
     })
+
+
+    // ==== copy from input to clipboard ====
+
+    $('.finance__grid-copy').on('click', function() {
+        $('.finance__grid-input').focus().select();
+        document.execCommand('copy');
+
+        $('.copy-finish').addClass('active');
+        setTimeout(function() {
+            $('.copy-finish').removeClass('active')
+        },2000)
+    })
+
 
 });
