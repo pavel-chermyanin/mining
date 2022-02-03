@@ -11,7 +11,7 @@ $(function () {
 
     $('.language-btn').on('change', languageWord)
 
-    function languageWord () {
+    function languageWord() {
         let select_value = $('.jq-selectbox__select-text')[0].innerText;
         $('.jq-selectbox__select-text')[0].innerText = select_value.slice(0, 2)
     }
@@ -73,19 +73,19 @@ $(function () {
 
     // ==== packets modal window ====
 
-    $('.packets__item-btn').on('click', function() {
+    $('.packets__item-btn').on('click', function () {
         $('.packets__modal').addClass('active');
 
-        $('.packets__modal').on('click', function(e) {
+        $('.packets__modal').on('click', function (e) {
             let elem = e.target;
-            if (!elem.classList.value.split(' ').includes('packets__modal-box')){
+            if (!elem.classList.value.split(' ').includes('packets__modal-box')) {
                 $('.packets__modal').removeClass('active');
             }
         })
     })
 
 
-    $('.packets__modal-btn').on('click', function() {
+    $('.packets__modal-btn').on('click', function () {
         $('.packets__modal').removeClass('active');
     })
 
@@ -100,7 +100,7 @@ $(function () {
         }
     });
 
-    $('.packets__item-top').on('click', function(){
+    $('.packets__item-top').on('click', function () {
         if ($(window).width() < 549) {
             $(this).next().slideToggle('600')
         }
@@ -109,15 +109,47 @@ $(function () {
 
     // ==== copy from input to clipboard ====
 
-    $('.finance__grid-copy').on('click', function() {
+    $('.finance__grid-copy').on('click', function () {
         $('.finance__grid-input').focus().select();
         document.execCommand('copy');
 
         $('.copy-finish').addClass('active');
-        setTimeout(function() {
+        setTimeout(function () {
             $('.copy-finish').removeClass('active')
-        },2000)
+        }, 2000)
     })
+
+
+
+    // ==== history operation drop down ====
+
+    if ($(window).width() < 879) {
+        $('.finance__item-operation').slideUp('600')
+    }
+
+    $(window).resize(function () {
+        if ($(window).width() < 879) {
+            $('.finance__item-operation').slideUp('600')
+        } else {
+            $('.finance__item-operation').slideDown('600')
+        }
+    });
+
+    $('.finance__item-date, .finance__item-category, .finance__item-sum').on('click', function () {
+        if ($(window).width() < 879) {
+            let currentItem = $($(this).parent().children('.finance__item-operation'));
+            currentItem.slideToggle('600');
+            $($(this).parent().toggleClass('active'));
+        }
+
+        $($(this).parent()).on('blur',  () => {
+            $($(this).parent().removeClass('active'));
+            $($(this).parent().children('.finance__item-operation').slideUp('600'));
+        })
+
+
+    })
+
 
 
 });

@@ -945,6 +945,7 @@ body {
   color: #DCDCDC;
 }
 .finance__item {
+  border: 2px solid transparent;
   width: 100%;
   background-color: #1b1c21;
   padding: 14px 17px;
@@ -963,9 +964,13 @@ body {
 .finance__item-date {
 }
 .finance__item-category {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-family: "Oxanium-Regular", sans-serif;
 }
 .finance__item-operation {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-family: "Oxanium-Regular", sans-serif;
 }
 .finance__item-sum {
