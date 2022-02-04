@@ -78,6 +78,10 @@
   .finance__grid-item--url {
     grid-column: 2 span;
   }
+  .finance__item-operation {
+    max-width: 380px;
+    /* margin-left: auto; */
+  }
 }
 @media (max-width: 880px) {
   .packets__inner {
@@ -86,16 +90,17 @@
   .documents__inner {
     grid-template-columns: repeat(3, 1fr);
   }
-  .finance__item {
-    grid-template-columns: 1fr 2fr 1fr;
+  .finance__item,
+  .finance__item-header {
+    grid-template-columns: 1fr 1fr;
   }
   .finance__item.active {
     border: 2px solid var(--accent-color);
   }
   .finance__item-operation {
-    order: 1;
-    grid-column: 3 span;
-    padding-top: 20px;
+    /* order: 1; */
+    /* grid-column: 3 span; */
+    /* padding-top: 20px; */
   }
   .finance__item-header .finance__item-operation{
     display: none;
@@ -113,6 +118,27 @@
   .documents__inner {
     grid-template-columns: repeat(2, 1fr);
   }
+  .finance__item{
+    flex-wrap: wrap
+  }
+  .finance__item-operation{
+    order: 1;
+    width: 100%;
+    padding-top: 10px;
+    max-width: 100%;
+  }
+  .finance__item-category {
+    padding-left: 30px;
+  /* min-width: 300px; */
+  /* width: 100%; */
+  max-width: 100%;
+  /* margin-left: auto; */
+
+}
+.finance__item:first-child .finance__item-operation,
+.finance__item:first-child .finance__item-category{
+  display: none !important;
+}
 }
 @media (max-width: 720px) {
   .sun-box__text-num {
@@ -174,6 +200,23 @@
   .finance__grid-item--btn {
     grid-column: 1 span;
   }
+  .finance__item{
+    grid-template-columns: 1fr 1fr;
+  }
+  .finance__item-category{
+    order: 1;
+    /* grid-column: 2 span; */
+    /* margin-top: 15px; */
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-top: 10px;
+  }
+  .finance__item-operation{
+    overflow: auto;
+    text-overflow: unset;
+    overflow: visible;
+  } 
 }
 @media (max-width: 550px) {
   .packets__inner {
@@ -247,6 +290,13 @@
   .finance__grid-copy::after {
     transform: translateY(0);
   }
+  .finance__item.active{
+    grid-template-columns: 1fr 1fr;
+    /* display: block; */
+  }
+  /* .finance__item.active .finance__item-category{
+    visibility: hidden;
+  } */
 }
 
 @media (max-width: 530px) {
@@ -374,3 +424,12 @@
     padding-left: 0;
   }
 }
+
+
+
+
+/* @media(min-width: 768px) {
+  .finance__item:first-child .finance__item-category{
+  padding-left: 10px;
+}
+} */

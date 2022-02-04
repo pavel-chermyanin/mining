@@ -123,32 +123,56 @@ $(function () {
 
     // ==== history operation drop down ====
 
-    if ($(window).width() < 879) {
+    if ($(window).width() < 769) {
         $('.finance__item-operation').slideUp('600')
-    }
 
-    $(window).resize(function () {
-        if ($(window).width() < 879) {
-            $('.finance__item-operation').slideUp('600')
-        } else {
-            $('.finance__item-operation').slideDown('600')
-        }
-    });
 
-    $('.finance__item-date, .finance__item-category, .finance__item-sum').on('click', function () {
-        if ($(window).width() < 879) {
-            let currentItem = $($(this).parent().children('.finance__item-operation'));
-            currentItem.slideToggle('600');
-            $($(this).parent().toggleClass('active'));
-        }
+        $('.finance__item:not(:first-child)').on('click', function (e) {
+            console.log($('.finance__item')[0])
+            $(this).children('.finance__item-operation').slideToggle('600');
+            $(this).toggleClass('active')
 
-        $($(this).parent()).on('blur',  () => {
-            $($(this).parent().removeClass('active'));
-            $($(this).parent().children('.finance__item-operation').slideUp('600'));
         })
 
+         $('.finance__item:not(:first-child)').on('blur', function() {
+             console.log('!')
+             $('.finance__item-operation').slideUp('600')
+             $('.finance__item.active').removeClass('active')
+         })
+    }
 
-    })
+
+
+
+    // $(window).resize(function () {
+    //     if ($(window).width() < 879) {
+    //         $('.finance__item-operation').slideUp('600')
+    //         // $('.finance__item-category').slideUp('600')
+    //     } else {
+    //         $('.finance__item-operation').slideDown('600')
+    //         // $('.finance__item-category').slideDown('600')
+    //     }
+    // });
+    // $($(this).parent()
+    // '.finance__item-date, .finance__item-category, .finance__item-sum'
+    // $('.finance__item').on('click', function () {
+    //     if ($(window).width() < 879) {
+    //         let currentItemOper = $(this).children('.finance__item-operation');
+    //         let currentItemCate = $(this).children('.finance__item-category');
+    //         // console.log(currentItem)
+    //         currentItemOper.slideToggle('600');
+    //         currentItemCate.slideToggle('600');
+    //         $($(this).toggleClass('active'));
+    //     }
+
+    //     $(this).on('blur',  () => {
+    //         $(this).removeClass('active');
+    //         $(this).children('.finance__item-operation').slideUp('600');
+    //         $(this).children('.finance__item-category').slideUp('600');
+    //     })
+
+
+    // })
 
 
 
