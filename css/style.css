@@ -962,7 +962,7 @@ body {
   cursor: pointer;
   transition: all .3s ease-in-out;
 }
-.finance__item:hover{
+.finance__item:not(:first-child):hover{
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 
 } 

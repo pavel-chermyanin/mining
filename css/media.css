@@ -135,8 +135,8 @@
   /* margin-left: auto; */
 
 }
-.finance__item:first-child .finance__item-operation,
-.finance__item:first-child .finance__item-category{
+.finance__item:first-child .finance__item-operation
+{
   display: none !important;
 }
 }
@@ -211,6 +211,9 @@
     max-width: 100%;
     padding-left: 0;
     padding-top: 10px;
+  }
+  .finance__item:first-child .finance__item-category{
+    display: none;
   }
   .finance__item-operation{
     overflow: auto;
