@@ -169,7 +169,7 @@ $(function () {
 
     // ==== question drop-down ====
 
-    $('.question__list-drop').slideUp('600')
+    // $('.question__list-drop').slideUp('600')
 
     $('.question__list-item').on('click', function() {
         $(this).children('.question__list-drop').slideToggle('600');
