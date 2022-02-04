@@ -167,4 +167,19 @@ $(function () {
 
     }
 
+    // ==== question drop-down ====
+
+    $('.question__list-drop').slideUp('600')
+
+    $('.question__list-item').on('click', function() {
+        $(this).children('.question__list-drop').slideToggle('600');
+
+        if (!$(this).children('.question__list-title')[0].classList.value.split(' ').includes('active')) {
+            $(this).children('.question__list-title').addClass('active')
+        } else {
+            $(this).children('.question__list-title').removeClass('active')
+        }
+    })
+
+
 });
