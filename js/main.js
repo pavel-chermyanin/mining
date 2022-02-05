@@ -7,14 +7,20 @@ $(function () {
 
     // ==== slice  word of language ====
 
-    languageWord();
+    if ($('.language-btn').length) {
+        
+        
+        $('.language-btn').on('change', languageWord)
+        
+        function languageWord() {
+            let select_value = $('.jq-selectbox__select-text')[0].innerText;
+            $('.jq-selectbox__select-text')[0].innerText = select_value.slice(0, 2)
+        }
 
-    $('.language-btn').on('change', languageWord)
 
-    function languageWord() {
-        let select_value = $('.jq-selectbox__select-text')[0].innerText;
-        $('.jq-selectbox__select-text')[0].innerText = select_value.slice(0, 2)
+        languageWord();
     }
+
 
     // ==== header-slider ====
 
@@ -180,6 +186,38 @@ $(function () {
             $(this).children('.question__list-title').removeClass('active')
         }
     })
+
+
+    // ==== marketing ====
+
+    $(window).resize(function () {
+        if ($(window).width() < 601) {
+            let imageElem = $('.personal__img');
+            $('.personal__img').remove();
+
+            $('.personal__levels').append(imageElem)
+        } else {
+
+            let imageElem = $('.personal__img');
+            $('.personal__img').remove();
+            $('.personal__inner').append(imageElem)
+
+        }
+    })
+
+
+    if ($(window).width() < 601) {
+        let imageElem = $('.personal__img');
+        $('.personal__img').remove();
+
+
+        $('.personal__levels').append(imageElem)
+        console.log(imageElem)
+    } else {
+        // let imageElem = $('.personal__img');
+        // $('.personal__img').remove();
+    }
+
 
 
 });

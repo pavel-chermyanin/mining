@@ -1180,6 +1180,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
+  padding-bottom: 50px;
 }
 .personal__desc {
   width: 100%;
