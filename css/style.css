@@ -1290,6 +1290,7 @@ body {
 .team__tabs {
   border-bottom: 2px solid #27282e;
   flex: 1;
+  font-family: "Oxanium-Regular", sans-serif;
 }
 .team__filter {
   width: 80px;
