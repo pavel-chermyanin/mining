@@ -557,9 +557,9 @@
 }
 
 @media (max-height: 680px) and (max-width: 400px){
-  .personal__img {
+  /* .personal__img {
     max-width: 400px;
-  }
+  } */
   .personal__inner {
     margin-top: 30px;
   }
