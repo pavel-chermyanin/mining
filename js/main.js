@@ -113,6 +113,10 @@ $(function () {
 
     // ==== packets drop-down =====
 
+    // if ($(window).width() < 529) {
+    //     $('.packets__item-top').next().slideUp('600')
+    // }
+
     $(window).resize(function () {
         if ($(window).width() < 529) {
             $('.packets__item-top').next().slideUp('600')
@@ -120,6 +124,8 @@ $(function () {
             $('.packets__item-top').next().slideDown('600')
         }
     });
+
+    
 
     $('.packets__item-top').on('click', function () {
         if ($(window).width() < 529) {
