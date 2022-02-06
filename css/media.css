@@ -147,6 +147,21 @@
   .error__top {
     margin-bottom: 50px;
   }
+  .team__header-bonus,
+  .team__header-amount,
+  .team__list-bonus,
+  .team__list-amount {
+    visibility: hidden;
+  }
+  .team__list-box.modal .team__list-amount,
+  .team__list-box.modal .team__list-bonus {
+    visibility: visible;
+  }
+  .team__list-person {
+    width: 174px;
+    text-overflow: ellipsis;
+    /* overflow: hidden; */
+  }
 }
 @media (max-width: 720px) {
   .sun-box__text-num {
@@ -187,6 +202,15 @@
     margin-bottom: 0;
     margin-right: 30px;
     width: 170px;
+  }
+  .team__list-person span {
+    width: 274px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .refer-bonus__inner {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -369,6 +393,9 @@
   .password-form .login-form__wrapper {
     padding: 0 50px 50px 50px;
   }
+  .team__filter {
+    display: none;
+  }
 }
 @media (max-width: 510px) {
   .login-form__wrapper {
@@ -459,6 +486,15 @@
   .personal__img {
     max-width: 100%;
   }
+  .team__list-person span {
+    width: 174px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .refer-bonus__inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media (max-width: 420px) {
   .login-form__social-item {
@@ -490,6 +526,13 @@
   }
   .finance__grid-btn {
     width: 100%;
+  }
+  .team__tabs {
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  .team__tabs-btn {
+    border-color: transparent;
   }
 }
 @media (max-width: 350px) {
