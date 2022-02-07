@@ -29,9 +29,9 @@ p {
   margin: 0;
 }
 body {
-  font-family: "Oxanium", cursive;
+  
   /* font-family: 'Roboto', sans-serif; */
-  /* font-family: "Oxanium-Regular", sans-serif; */
+  font-family: 'Oxanium-Regular', sans-serif;
   color: #2f3035;
   font-size: 16px;
   line-height: 22px;
@@ -100,11 +100,9 @@ body {
   padding-bottom: 4px;
   margin-right: 18px;
   cursor: pointer;
-  font-family: "Oxanium-Regular", sans-serif;
 }
 .login-form__input-text,
 .login-form__input-password {
-  font-family: "Oxanium-Regular", sans-serif;
   font-weight: 400;
 
   width: 100%;
@@ -117,7 +115,6 @@ body {
 }
 .login-form__input-text::placeholder,
 .login-form__input-password::placeholder {
-  font-family: "Oxanium-Regular", sans-serif;
   font-weight: 400;
 
   color: var(--prime-color-opacity);
@@ -145,7 +142,6 @@ body {
   transform: rotate(0);
 }
 .login-form__checkbox-text {
-  font-family: "Oxanium-Regular", sans-serif;
   color: var(--prime-color);
   margin-left: 12px;
 }
@@ -157,14 +153,12 @@ body {
   color: var(--second-accent-color);
 }
 .login-form__box {
-  font-family: "Oxanium-Regular", sans-serif;
   margin-top: 27px;
   display: flex;
   align-items: center;
   margin-bottom: 73px;
 }
 .login-form__submit {
-  font-family: "Oxanium-Regular", sans-serif;
   font-weight: 400;
   padding: 18px 45px;
   color: #fff;
@@ -378,14 +372,14 @@ body {
   border: 1px solid #404040;
 }
 .slider-box__item-num {
-  /* font-family: "Oxanium-Medium", sans-serif; */
+ font-family: "Oxanium", cursive;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
   margin-bottom: 2px;
 }
 .slider-box__item-text {
-  font-family: "Rubik-Regular", sans-serif;
+  font-family: "Oxanium", cursive;
   font-size: 14px;
   line-height: 17px;
   font-weight: 400;
@@ -527,21 +521,20 @@ body {
   max-width: 100%;
 }
 .sun-box__text {
+  font-family: "Oxanium", cursive;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: center; 
 }
 .sun-box__text-name {
-  font-family: "Rubik-Regular", sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: #fff;
 }
 .sun-box__text-num {
-  /* font-family: "Oxanium-Bold", sans-serif; */
   font-weight: 700;
   font-size: 80px;
   line-height: 101px;
@@ -585,7 +578,6 @@ body {
   margin-top: 22px;
   margin-bottom: 12px;
   color: #f5f5f5;
-  font-family: "Oxanium-Regular", sans-serif;
 }
 .packets__inner {
   display: grid;
@@ -594,10 +586,12 @@ body {
 }
 .packets__item {
   background-color: #1d1f25;
+  
 }
 
 .packets__item-top {
   padding: 26px 24px 30px;
+  font-family: "Oxanium", cursive;
 }
 .packets__item-name {
   font-size: 24px;
@@ -615,10 +609,12 @@ body {
 .packets__item-days {
   color: rgba(0, 0, 0, 0.66);
 }
+.packets__item-days span{
+  font-family: 'Oxanium-Regular', sans-serif;
+}
 .packets__item-bottom {
   padding: 30px 24px 35px;
   text-align: center;
-  font-family: "Oxanium-Regular", sans-serif;
 }
 .packets__item-info {
   color: #5f6377;
@@ -790,7 +786,6 @@ body {
 .documents__item {
   background-color: #1d1f25;
   min-height: 390px;
-  font-family: "Oxanium-Regular", sans-serif;
 }
 .documents__item-img {
   max-height: 275px;
@@ -835,7 +830,6 @@ body {
   margin-bottom: 100px;
 }
 .finance__title {
-  font-family: "Oxanium-Regular", sans-serif;
   font-size: 36px;
   line-height: 45px;
   margin-top: 22px;
@@ -856,9 +850,9 @@ body {
   line-height: 45px;
   color: #ffffff;
   margin-bottom: 8px;
+  font-family: "Oxanium", cursive;
 }
 .finance__grid-desc {
-  font-family: "Oxanium-Regular", sans-serif;
   color: rgba(255, 255, 255, 0.66);
 }
 .finance__grid-item--btn {
@@ -867,7 +861,6 @@ body {
   border: none;
   color: #fff;
   background-color: var(--accent-color);
-  font-family: "Oxanium-Regular", sans-serif;
   margin-top: 30px;
   padding: 13px 78px 15px;
   border-radius: 4px;
@@ -879,7 +872,6 @@ body {
   grid-column: 3 span;
 }
 .finance__grid-text {
-  font-family: "Oxanium-Regular", sans-serif;
   color: #ffffff;
   margin-bottom: 19px;
 }
@@ -909,7 +901,6 @@ body {
   cursor: pointer;
 }
 .finance__grid-copy span {
-  font-family: "Oxanium-Regular", sans-serif;
 }
 .finance__grid-copy::after {
   content: "";
@@ -942,7 +933,6 @@ body {
   margin-top: 40px;
 }
 .finance__history-title {
-  font-family: "Oxanium-Regular", sans-serif;
   font-size: 24px;
   line-height: 30px;
   color: #ffffff;
@@ -973,35 +963,36 @@ body {
 .finance__item-header {
   color: rgba(220, 220, 220, 0.66);
 }
-.finance__item-header .finance__item-sum,
-.finance__item-header .finance__item-date {
-  font-family: "Oxanium-Regular", sans-serif;
-}
+
+
 .finance__item-date {
   min-width: 90px;
   margin-right: 10px;
+  font-family: "Oxanium", cursive;
+}
+.finance__item--header .finance__item-sum,
+.finance__item--header .finance__item-date{
+  font-family: 'Oxanium-Regular', sans-serif;
 }
 
 .finance__item-category {
   min-width: 200px;
   max-width: 200px;
   margin-right: 15px;
-  font-family: "Oxanium-Regular", sans-serif;
 }
 .finance__item-operation {
   max-width: 600px;
   text-align: left;
-  font-family: "Oxanium-Regular", sans-serif;
 }
 .finance__item-sum {
   justify-self: flex-end;
   flex-shrink: 0;
   margin-left: auto;
+  font-family: "Oxanium", cursive;
 }
 
 .finance__table-cell:nth-child(2),
 .finance__table-cell:nth-child(3) {
-  font-family: "Oxanium-Regular", sans-serif;
 }
 
 /* ============= question =============== */
@@ -1013,7 +1004,6 @@ body {
   font-size: 36px;
   line-height: 45px;
   color: #ffffff;
-  font-family: "Oxanium-Regular", sans-serif;
   margin: 22px 0 13px;
 }
 .question__list {
@@ -1031,7 +1021,6 @@ body {
 .question__list-title {
   padding-left: 33px;
   color: #dcdcdc;
-  font-family: "Oxanium-Regular", sans-serif;
   position: relative;
 }
 .question__list-title:before {
@@ -1056,7 +1045,6 @@ body {
   line-height: 22px;
   color: rgba(255, 255, 255, 0.66);
   display: none;
-  font-family: "Oxanium-Regular", sans-serif;
 }
 
 /* =========== privasy ============= */
@@ -1065,7 +1053,6 @@ body {
   font-size: 36px;
   line-height: 45px;
   color: #ffffff;
-  font-family: "Oxanium-Regular", sans-serif;
   margin-top: 22px;
   margin-bottom: 20px;
 }
@@ -1073,7 +1060,6 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.66);
-  font-family: "Oxanium-Regular", sans-serif;
 }
 
 /* =========== error ============= */
@@ -1113,7 +1099,6 @@ body {
 .error__top-img {
 }
 .error__title {
-  font-family: "Oxanium-Regular", sans-serif;
   font-size: 24px;
   line-height: 30px;
   color: #ffffff;
@@ -1121,7 +1106,6 @@ body {
   margin-bottom: 54px;
 }
 .error__link {
-  font-family: "Oxanium-Regular", sans-serif;
   color: #ffffff;
   background-color: var(--accent-color);
   padding: 18px 30px;
@@ -1274,7 +1258,6 @@ body {
 .container {
 }
 .team__title {
-  font-family: "Oxanium-Regular", sans-serif;
   margin-top: 22px;
   margin-bottom: 17px;
   font-size: 36px;
@@ -1290,7 +1273,6 @@ body {
 .team__tabs {
   border-bottom: 2px solid #27282e;
   flex: 1;
-  font-family: "Oxanium-Regular", sans-serif;
 }
 .team__filter {
   width: 80px;
@@ -1342,7 +1324,6 @@ body {
 .team__box {
 }
 .team__header {
-  font-family: "Oxanium-Regular", sans-serif;
   background: #1b1c21;
   border-radius: 5px;
   color: #dcdcdc;
@@ -1401,7 +1382,6 @@ body {
   /* margin-top: 30px; */
 }
 .team__list-box.modal .team__list-amount {
-  font-family: "Oxanium-Regular", sans-serif;
   text-align: right;
   margin-bottom: 30px;
   border-bottom: 1px dashed #505050;
@@ -1414,7 +1394,6 @@ body {
   left: 0;
 }
 .team__list-box.modal .team__list-bonus {
-  font-family: "Oxanium-Regular", sans-serif;
   width: auto;
   border-bottom: 1px dashed #505050;
   position: relative;
@@ -1541,7 +1520,6 @@ body {
   padding: 17px 20px 23px;
 }
 .refer-bonus__title {
-  font-family: "Oxanium-Regular", sans-serif;
   font-size: 24px;
   line-height: 30px;
   color: #dcdcdc;
@@ -1556,13 +1534,13 @@ body {
   margin-left: 50px;
 } */
 .refer-bonus__item-text {
-  font-family: "Oxanium-Regular", sans-serif;
   color: rgba(220, 220, 220, 0.66);
   margin-bottom: 8px;
 }
 
 .refer-bonus__item-num {
   color: #dcdcdc;
+  font-family: "Oxanium", cursive;
 }
 
 .refer-bonus__list.active{

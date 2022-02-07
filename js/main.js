@@ -113,9 +113,9 @@ $(function () {
 
     // ==== packets drop-down =====
 
-    // if ($(window).width() < 529) {
-    //     $('.packets__item-top').next().slideUp('600')
-    // }
+    if ($(window).width() < 529) {
+        $('.packets__item-top').next().slideUp('600')
+    }
 
     $(window).resize(function () {
         if ($(window).width() < 529) {
@@ -243,14 +243,15 @@ $(function () {
     });
 
     // ==== hover team__list-box ====
-
-
+    let currentColor = '';
+    
     $('.team__list-box').hover(function (e) {
+        let currentColor = e.target.style.backgroundColor;
         if (e.target.classList.value.split(' ').includes('team__list-box')) {
             e.target.style.backgroundColor = 'rgba(12, 153, 12, 0.4)'
         }
     }, function (e) {
-        $('.team__list-box').css('background-color', '#1b1c21')
+        $('.team__list-box').css('background-color', currentColor)
     })
 
     // ==== filters buttons ====
