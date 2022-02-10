@@ -125,7 +125,7 @@ $(function () {
         }
     });
 
-    
+
 
     $('.packets__item-top').on('click', function () {
         if ($(window).width() < 529) {
@@ -233,8 +233,13 @@ $(function () {
     }
 
     // ==== team ====
+    // $('.team__list').css('opacity', '0');
+    // setTimeout(function() {
+    //     $('.team__list').css('opacity', '1');
+    // },500)
+    // $('.team__list').slice(1).css('display', 'none')
 
-    $('.team__list-item').children('.team__list').slideUp('300')
+    // $('.team__list-item').children('.team__list').slideUp('300')
 
     $('.team__list-item').on('click', function (e) {
         $(this).toggleClass('active');
@@ -244,7 +249,7 @@ $(function () {
 
     // ==== hover team__list-box ====
     let currentColor = '';
-    
+
     $('.team__list-box').hover(function (e) {
         let currentColor = e.target.style.backgroundColor;
         if (e.target.classList.value.split(' ').includes('team__list-box')) {
@@ -256,12 +261,12 @@ $(function () {
 
     // ==== filters buttons ====
 
-    $('.team__filter-img--show').on('click', function() {
+    $('.team__filter-img--show').on('click', function () {
         $('.team__list-item').addClass('active');
         $('.team__list').show()
     })
 
-    $('.team__filter-img--hide').on('click', function() {
+    $('.team__filter-img--hide').on('click', function () {
         $('.team__list-item').removeClass('active');
         $('.team__list').slice(1).hide()
     })
@@ -312,7 +317,7 @@ $(function () {
     }
 
     // ==== count for team__list-item ====
-
+    // $('.team__list').hide()
 
     $('.team__list').each(function (index, list) {
 
@@ -323,44 +328,125 @@ $(function () {
 
     // ==== refer-bonus hover ====
 
-    $('.refer-bonus__list-item').hover(function (e) {
+    // $('.refer-bonus__list-item').hover(function (e) {
 
-        if (e.target.classList[0] === 'refer-bonus__list-item') {
-            e.target.style.backgroundColor = 'rgba(12, 153, 12, 0.4)';
-            e.stopPropagation()
-        }
-        if (e.target.classList[0] === 'refer-bonus__list-text') {
-            e.target.parentNode.style.backgroundColor = 'rgba(12, 153, 12, 0.4)';
-        }
+    //     if (e.target.classList[0] === 'refer-bonus__list-item') {
+    //         e.target.style.backgroundColor = 'rgba(12, 153, 12, 0.4)';
+    //         e.stopPropagation()
+    //     }
+    //     if (e.target.classList[0] === 'refer-bonus__list-text') {
+    //         e.target.parentNode.style.backgroundColor = 'rgba(12, 153, 12, 0.4)';
+    //     }
 
-    }, function (e) {
-        $('.refer-bonus__list-item').css('background-color', '#1b1c21')
-    })
+    // }, function (e) {
+    //     $('.refer-bonus__list-item').css('background-color', '#1b1c21')
+    // })
 
 
     // ==== refer-bonus list-toggle ====
 
-    $('.refer-bonus__list').slice(1).hide('600')
+    $('.refer-bonus__list').slice(1).hide()
 
-    $('.refer-bonus__list-item p').on('click', function (e) {
+    $('.refer-bonus__list-item--first').on('click', function (e) {
 
-        if (!e.target.parentNode.classList.value.split(' ').includes('active')) {
-            e.target.parentNode.classList += (' active')
-        } else {
-            e.target.parentNode.classList.remove('active')
-        }
+        $(this).each((i, item) => {
+            if (!item.classList.value.split(' ').includes('active')) {
+                $('.refer-bonus__list-item--first').removeClass('active');
+                $('.grid-box > .refer-bonus__list--second').remove()
+                $('.grid-box > .refer-bonus__list--third').remove()
+                $('.grid-box > .refer-bonus__list--fourth').remove()
+                $(this).addClass('active');
+            } else {
+                $('.grid-box > .refer-bonus__list--second').remove()
+                $('.grid-box > .refer-bonus__list--third').remove()
+                $('.grid-box > .refer-bonus__list--fourth').remove()
+
+                $('.refer-bonus__list-item--first').removeClass('active');
+                $(this).addClass('active')
+            }
+        })
+
+        let secondList = $(this).children('.refer-bonus__list--second').clone();
+        $('.grid-box').append(secondList.show())
 
 
-        if ($(this).next().is(':hidden')) {
-            $(this).next().addClass('active')
-            $(this).next().show()
+        $('.refer-bonus__list-item--second').on('click', function (e) {
+            $(this).each((i, item) => {
+                if (!item.classList.value.split(' ').includes('active')) {
+                    $('.refer-bonus__list-item--second').removeClass('active');
+                    $('.grid-box > .refer-bonus__list--third').remove()
+                    $('.grid-box > .refer-bonus__list--fourth').remove()
 
-        } else {
-            $(this).next().hide()
-            $(this).next().removeClass('active')
+                    $(this).addClass('active');
+                } else {
+                    $('.grid-box > .refer-bonus__list--third').remove()
+                    $('.grid-box > .refer-bonus__list--fourth').remove()
 
-        }
+                    $('.refer-bonus__list-item--second').removeClass('active');
+                    $(this).addClass('active')
+                }
+            })
+
+            let secondList = $(this).children('.refer-bonus__list--third').clone();
+            $('.grid-box').append(secondList.show())
+
+
+            $('.refer-bonus__list-item--third').on('click', function (e) {
+                $(this).each((i, item) => {
+                    if (!item.classList.value.split(' ').includes('active')) {
+                        $('.refer-bonus__list-item--third').removeClass('active');
+                        $('.grid-box > .refer-bonus__list--fourth').remove()
+                        $(this).addClass('active');
+                    } else {
+                        $('.grid-box > .refer-bonus__list--fourth').remove()
+                        $('.refer-bonus__list-item--third').removeClass('active');
+                        $(this).addClass('active')
+                    }
+                })
+
+                let secondList = $(this).children('.refer-bonus__list--fourth').clone();
+                $('.grid-box').append(secondList.show())
+
+
+                $('.refer-bonus__list-item--fourth').on('click', function() {
+                    $(this).each((i, item) => {
+                        if (!item.classList.value.split(' ').includes('active')) {
+                            $('.refer-bonus__list-item--fourth').removeClass('active');
+                            $(this).addClass('active');
+                        } else{
+                            $('.refer-bonus__list-item--fourth').removeClass('active');
+                            $(this).addClass('active');
+                        }
+                    })
+                })
+            })
+            
+        })
+
     })
+
+
+
+
+
+
+    //     if (!e.target.parentNode.classList.value.split(' ').includes('active')) {
+    //         e.target.parentNode.classList += (' active')
+    //     } else {
+    //         e.target.parentNode.classList.remove('active')
+    //     }
+
+
+    //     if ($(this).next().is(':hidden')) {
+    //         $(this).next().addClass('active')
+    //         $(this).next().show()
+
+    //     } else {
+    //         $(this).next().hide()
+    //         $(this).next().removeClass('active')
+
+    //     }
+    // })
 
     // ==== team tabs ====
 
