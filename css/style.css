@@ -1559,7 +1559,7 @@ body {
 
 .refer-bonus__item-num {
   color: #dcdcdc;
-  font-family: "Oxanium", cursive;
+  /* font-family: "Oxanium", cursive; */
 }
 
 .refer-bonus__list.active {
