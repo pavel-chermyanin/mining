@@ -371,6 +371,35 @@ $(function () {
 
 
         $('.refer-bonus__list-item--second').on('click', function (e) {
+            $('.accent-line').remove()
+            $('.accent-line-second').remove()
+            $('.accent-line-third').remove()
+
+            let heightElem = parseInt($(this).css('height')) + 5;
+            let indexPrevElem = $('.refer-bonus__list-item--first.active').index();
+            let indexCurrentElem = $(this).index();
+            let differentBeetwenElems = Math.abs(indexCurrentElem - indexPrevElem);
+            let accent_line = $('<div>', { class: 'accent-line' });
+            $(this).append(accent_line)
+
+            if (indexPrevElem > indexCurrentElem) {
+                $('.accent-line').css('top', '50%')
+                $('.accent-line').addClass('top')
+            } else {
+                $('.accent-line').css('bottom', '50%');
+                $('.accent-line').addClass('bottom')
+            }
+
+            if (differentBeetwenElems) {
+                $('.accent-line').css('height', `${heightElem * differentBeetwenElems}px`)
+            } else {
+                $('.accent-line').removeClass('bottom')
+                $('.accent-line').css('transform', 'rotate(90deg)')
+            }
+
+
+
+
             $(this).each((i, item) => {
                 if (!item.classList.value.split(' ').includes('active')) {
                     $('.refer-bonus__list-item--second').removeClass('active');
@@ -392,6 +421,34 @@ $(function () {
 
 
             $('.refer-bonus__list-item--third').on('click', function (e) {
+                $('.accent-line-second').remove()
+                $('.accent-line-third').remove()
+
+                let heightElem = parseInt($(this).css('height')) + 5;
+                let indexPrevElem = $('.refer-bonus__list-item--second.active').index();
+                let indexCurrentElem = $(this).index();
+                let differentBeetwenElems = Math.abs(indexCurrentElem - indexPrevElem);
+                let accent_line = $('<div>', { class: 'accent-line-second' });
+                $(this).append(accent_line)
+
+                if (indexPrevElem > indexCurrentElem) {
+                    $('.accent-line-second').css('top', '50%')
+                    $('.accent-line-second').addClass('top')
+                } else {
+                    $('.accent-line-second').css('bottom', '50%');
+                    $('.accent-line-second').addClass('bottom')
+                }
+
+                if (differentBeetwenElems) {
+                    $('.accent-line-second').css('height', `${heightElem * differentBeetwenElems}px`)
+                } else {
+                    $('.accent-line-second').removeClass('bottom')
+                    $('.accent-line-second').css('transform', 'rotate(90deg)')
+                }
+
+
+
+
                 $(this).each((i, item) => {
                     if (!item.classList.value.split(' ').includes('active')) {
                         $('.refer-bonus__list-item--third').removeClass('active');
@@ -409,6 +466,33 @@ $(function () {
 
 
                 $('.refer-bonus__list-item--fourth').on('click', function() {
+                    $('.accent-line-third').remove()
+
+                    let heightElem = parseInt($(this).css('height')) + 5;
+                    let indexPrevElem = $('.refer-bonus__list-item--third.active').index();
+                    let indexCurrentElem = $(this).index();
+                    let differentBeetwenElems = Math.abs(indexCurrentElem - indexPrevElem);
+                    let accent_line = $('<div>', { class: 'accent-line-third' });
+                    $(this).append(accent_line)
+
+                    if (indexPrevElem > indexCurrentElem) {
+                        $('.accent-line-third').css('top', '50%')
+                        $('.accent-line-third').addClass('top')
+                    } else {
+                        $('.accent-line-third').css('bottom', '50%');
+                        $('.accent-line-third').addClass('bottom')
+                    }
+
+                    if (differentBeetwenElems) {
+                        $('.accent-line-third').css('height', `${heightElem * differentBeetwenElems}px`)
+                    } else {
+                        $('.accent-line-third').removeClass('bottom')
+                        $('.accent-line-third').css('transform', 'rotate(90deg)')
+                    }
+
+
+
+
                     $(this).each((i, item) => {
                         if (!item.classList.value.split(' ').includes('active')) {
                             $('.refer-bonus__list-item--fourth').removeClass('active');
