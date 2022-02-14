@@ -24,51 +24,53 @@ $(function () {
 
     // ==== header-slider ====
 
-    $('.slider-box').slick({
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        prevArrow: '<button class="slider__btn slider__btn-prev"><svg width="15" height="27" viewBox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 1L1 13.5L13.5 26" stroke="white" stroke opacity="0.33" stroke  width="2" stroke linecap="round" stroke linejoin="round"/></svg></button>',
-        nextArrow: '<button class="slider__btn slider__btn-next"><svg width="15" height="27" viewBox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 26L13.5 13.5L1 0.999999" stroke="white" stroke opacity="0.33" stroke width="2" stroke linecap="round" stroke linejoin="round" /></svg ></button>',
-        responsive: [
-            {
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-
-                }
-            },
-            {
-                breakpoint: 850,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 719,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 570,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-
-        ]
-    })
+    if ($('.slider-box').length) {
+        $('.slider-box').slick({
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            prevArrow: '<button class="slider__btn slider__btn-prev"><svg width="15" height="27" viewBox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 1L1 13.5L13.5 26" stroke="white" stroke opacity="0.33" stroke  width="2" stroke linecap="round" stroke linejoin="round"/></svg></button>',
+            nextArrow: '<button class="slider__btn slider__btn-next"><svg width="15" height="27" viewBox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 26L13.5 13.5L1 0.999999" stroke="white" stroke opacity="0.33" stroke width="2" stroke linecap="round" stroke linejoin="round" /></svg ></button>',
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+    
+                    }
+                },
+                {
+                    breakpoint: 850,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 719,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 570,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 450,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+    
+            ]
+        })
+    }
 
     // ==== menu-burger ====
 
@@ -233,21 +235,27 @@ $(function () {
     }
 
     // ==== team ====
-    // $('.team__list').css('opacity', '0');
-    // setTimeout(function() {
-    //     $('.team__list').css('opacity', '1');
-    // },500)
-    // $('.team__list').slice(1).css('display', 'none')
 
-    // $('.team__list-item').children('.team__list').slideUp('300')
+
+
+    // if team__list-item does not have ol,then to remove arrow
+
+    $('.team__list-item').each((i,item)=> {
+        if(!item.children[1]) {
+            item.classList.add('without-arrow')
+        }
+    })
+
 
     $('.team__list-item').on('click', function (e) {
+        
         $(this).toggleClass('active');
         e.stopPropagation();
         $(this).children('.team__list').slideToggle('600')
     });
 
     // ==== hover team__list-box ====
+    
     let currentColor = '';
 
     $('.team__list-box').hover(function (e) {
@@ -281,6 +289,7 @@ $(function () {
                 let modal = $('<div>', { class: 'team-modal' })[0]
                 let modal_btn = $('<button>', { class: 'team-modal__btn' })[0]
                 let elem = $(this).parent().parent().clone();
+                elem.css('background-color', 'transparent');
                 elem.addClass('modal');
                 elem.append(modal_btn)
                 modal.append(elem[0])
@@ -304,6 +313,7 @@ $(function () {
             let modal = $('<div>', { class: 'team-modal' })[0]
             let modal_btn = $('<button>', { class: 'team-modal__btn' })[0]
             let elem = $(this).parent().parent().clone();
+            elem.css('background-color', 'transparent')
             elem.addClass('modal');
             elem.append(modal_btn)
             modal.append(elem[0])
@@ -317,7 +327,6 @@ $(function () {
     }
 
     // ==== count for team__list-item ====
-    // $('.team__list').hide()
 
     $('.team__list').each(function (index, list) {
 
@@ -326,21 +335,6 @@ $(function () {
         }
     })
 
-    // ==== refer-bonus hover ====
-
-    // $('.refer-bonus__list-item').hover(function (e) {
-
-    //     if (e.target.classList[0] === 'refer-bonus__list-item') {
-    //         e.target.style.backgroundColor = 'rgba(12, 153, 12, 0.4)';
-    //         e.stopPropagation()
-    //     }
-    //     if (e.target.classList[0] === 'refer-bonus__list-text') {
-    //         e.target.parentNode.style.backgroundColor = 'rgba(12, 153, 12, 0.4)';
-    //     }
-
-    // }, function (e) {
-    //     $('.refer-bonus__list-item').css('background-color', '#1b1c21')
-    // })
 
 
     // ==== refer-bonus list-toggle ====
@@ -395,6 +389,7 @@ $(function () {
             } else {
                 $('.accent-line').removeClass('bottom')
                 $('.accent-line').css('transform', 'rotate(90deg)')
+                $('.accent-line').css('bottom', '36%')
             }
 
 
@@ -444,6 +439,7 @@ $(function () {
                 } else {
                     $('.accent-line-second').removeClass('bottom')
                     $('.accent-line-second').css('transform', 'rotate(90deg)')
+                    $('.accent-line-second').css('bottom', '36%')
                 }
 
 
@@ -488,6 +484,7 @@ $(function () {
                     } else {
                         $('.accent-line-third').removeClass('bottom')
                         $('.accent-line-third').css('transform', 'rotate(90deg)')
+                        $('.accent-line-third').css('bottom', '36%')
                     }
 
 
@@ -508,7 +505,6 @@ $(function () {
         })
 
     })
-
 
 
 

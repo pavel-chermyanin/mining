@@ -204,7 +204,7 @@
     width: 170px;
   }
   .team__list-person span {
-    width: 274px;
+    width: 226px;
     text-overflow: ellipsis;
     overflow: hidden;
     display: inline-block;
@@ -528,12 +528,12 @@
     width: 100%;
   }
   .team__tabs {
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     white-space: nowrap;
   }
-  .team__tabs-btn {
+  /* .team__tabs-btn {
     border-color: transparent;
-  }
+  } */
 }
 @media (max-width: 350px) {
   .login-form__social-item + .login-form__social-item {
@@ -553,6 +553,9 @@
   }
   .documents__item-desc {
     padding-left: 0;
+  }
+  .team__tabs{
+    font-size: 14px;
   }
 }
 

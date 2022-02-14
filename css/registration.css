@@ -35,6 +35,9 @@
   margin-bottom: 28px;
   background-color: #21232a;
 }
+.registration-form__capcha-label .login-form__checkbox-text{
+  font-family: 'Oxanium', cursive;
+}
 .registration-form .jq-checkbox.registration-form__capcha-input {
   border: none;
   background: #27282e;
