@@ -1635,9 +1635,9 @@ body {
 
 
 .refer-bonus__list-item p {
-  /* max-width: 152px; */
+  max-width: 152px;
   text-overflow: ellipsis;
-  /* overflow: hidden; */
+  overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
   padding: 14px 20px;
