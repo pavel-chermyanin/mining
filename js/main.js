@@ -561,13 +561,13 @@ $(function () {
                 setTimeout(() => {
                     if (int - 1 === i && float === k) {
                         console.log('!')
-                        spanLength[k].style.backgroundColor = 'red';
+                        spanLength[k].style.backgroundColor = '#F49400';
                     }
 
                     else if (int - 1 === i && k > float) {
                         spanLength[k].style.backgroundColor = 'rgb(107, 104, 104)';
                     } else {
-                        spanLength[k].style.backgroundColor = 'green';
+                        spanLength[k].style.backgroundColor = '#1CFF40';
                     }
                     
                     
