@@ -780,6 +780,9 @@
       top: 52%;
       left: 29%;
     }
+    .sun-box__item span {
+    height: 8px;
+}
   }
   @media (max-height: 820px) and (max-width: 370px) {
     .sun-box__item {
@@ -850,6 +853,7 @@
     }
     .sun-box__item span {
       width: 1px;
+      height: 9px;
     }
     .sun-box__item {
       left: -67px;
@@ -865,6 +869,7 @@
     .sun-wrapper {
       left: 45%;
     }
+
   }
   @media (max-height: 720px) and (max-width: 740px) {
     .sun-box__info {
@@ -904,7 +909,13 @@
       left: -13px;
     }
   }
-
+@media (max-height: 680px) and (max-width: 440px){
+  .sun-wrapper{
+    top: 59%;
+  }
+}
+ 
+}
   @media (max-height: 630px) and (max-width: 650px) {
     .sun-wrapper {
       top: 64%;
