@@ -313,7 +313,7 @@ $(function () {
             let modal = $('<div>', { class: 'team-modal' })[0]
             let modal_btn = $('<button>', { class: 'team-modal__btn' })[0]
             let elem = $(this).parent().parent().clone();
-            elem.css('background-color', 'transparent')
+            elem.css('background-color', '#1b1c21')
             elem.addClass('modal');
             elem.append(modal_btn)
             modal.append(elem[0])
