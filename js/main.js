@@ -36,7 +36,7 @@ $(function () {
                     settings: {
                         slidesToShow: 6,
                         slidesToScroll: 1,
-    
+
                     }
                 },
                 {
@@ -67,7 +67,7 @@ $(function () {
                         slidesToScroll: 1
                     }
                 },
-    
+
             ]
         })
     }
@@ -240,22 +240,22 @@ $(function () {
 
     // if team__list-item does not have ol,then to remove arrow
 
-    $('.team__list-item').each((i,item)=> {
-        if(!item.children[1]) {
+    $('.team__list-item').each((i, item) => {
+        if (!item.children[1]) {
             item.classList.add('without-arrow')
         }
     })
 
 
     $('.team__list-item').on('click', function (e) {
-        
+
         $(this).toggleClass('active');
         e.stopPropagation();
         $(this).children('.team__list').slideToggle('600')
     });
 
     // ==== hover team__list-box ====
-    
+
     let currentColor = '';
 
     $('.team__list-box').hover(function (e) {
@@ -461,7 +461,7 @@ $(function () {
                 $('.grid-box').append(secondList.show())
 
 
-                $('.refer-bonus__list-item--fourth').on('click', function() {
+                $('.refer-bonus__list-item--fourth').on('click', function () {
                     $('.accent-line-third').remove()
 
                     let heightElem = parseInt($(this).css('height')) + 5;
@@ -494,14 +494,14 @@ $(function () {
                         if (!item.classList.value.split(' ').includes('active')) {
                             $('.refer-bonus__list-item--fourth').removeClass('active');
                             $(this).addClass('active');
-                        } else{
+                        } else {
                             $('.refer-bonus__list-item--fourth').removeClass('active');
                             $(this).addClass('active');
                         }
                     })
                 })
             })
-            
+
         })
 
     })
@@ -539,6 +539,45 @@ $(function () {
         $(this).addClass('team__tabs-btn--active')
         $($(this).attr('href')).addClass('team__tabs-content--active')
     })
+
+
+
+    // ==== sun ====
+    let countSun = +$('.sun-wrapper').attr('data-count');
+    let int = Math.trunc(countSun / 100 * 24) + 1
+    let float = Math.trunc(((countSun / 100 * 24).toFixed(2).slice(-2) / 100 * 33))
+
+
+    console.log(float)
+    let childrenSun = $('.sun-box__wrapper').children()
+    for (let i = 0; i < int; i++) {
+
+        setTimeout(() => {
+            let spanLength = childrenSun[i]?.children;
+            if (!spanLength) return
+            for (let k = 0; k < spanLength.length; k++) {
+
+
+                setTimeout(() => {
+                    if (int - 1 === i && float === k) {
+                        console.log('!')
+                        spanLength[k].style.backgroundColor = 'red';
+                    }
+
+                    else if (int - 1 === i && k > float) {
+                        spanLength[k].style.backgroundColor = 'rgb(107, 104, 104)';
+                    } else {
+                        spanLength[k].style.backgroundColor = 'green';
+                    }
+                    
+                    
+                }, k * 50)
+
+            }
+        }, i * 400)
+        // console.log(spanLength.length)
+    }
+
 
 
 
