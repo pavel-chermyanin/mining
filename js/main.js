@@ -571,10 +571,10 @@ $(function () {
                     }
                     
                     
-                }, k * 50)
+                }, k * 20)
 
             }
-        }, i * 400)
+        }, i * 200)
         // console.log(spanLength.length)
     }
 
